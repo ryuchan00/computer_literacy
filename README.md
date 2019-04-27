@@ -1,0 +1,2 @@
+# computer_literacy
+uecのコンピューターリテラシー前期
