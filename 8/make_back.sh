@@ -5,7 +5,7 @@ function backup_file() {
   if [[ -e $1 ]]; then
     cp $1 $1_$now
   else
-    echo $1 ' not existed.'
+    echo $1 'is not existed.'
   fi
 }
 
