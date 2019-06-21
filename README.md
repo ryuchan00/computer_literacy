@@ -10,4 +10,4 @@ git commit [commit message]
 git push
 ```
 
-ここまでやったらPull requestを作成してください。Mergeは @ryuchan00 が行います。
+ここまでやったらPull requestを作成してください。Mergeは https://github.com/ryuchan00 が行います。
