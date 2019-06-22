@@ -1,6 +1,9 @@
 # computer_literacy
 uecのコンピューターリテラシー前期
 
+Emacs チートシート
+https://gihyo.jp/assets/files/magazine/SD/2015/201510/download/Furoku_CheatSheet_Emacs.pdf
+
 setting
 
 ```
