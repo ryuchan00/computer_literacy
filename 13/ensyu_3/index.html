@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>sample</title>
+    <style type="text/css">
+        body {
+            margin: 0px
+        }
+
+        .main {
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            grid-template-areas: "side header header header" "side a b c" "side d e f" "side footer footer footer";
+            grid-template-columns: 14em 2fr 1fr 1fr;
+            grid-template-rows: 6em 1fr 1fr 3em
+        }
+
+        header {
+            grid-area: header;
+            background: rgb(200, 240, 180);
+            padding: 1em
+        }
+
+        aside {
+            grid-area: side;
+            background: rgb(180, 220, 220);
+            padding: 1em
+        }
+
+        section {
+            background: #ffffff;
+            padding: 1em;
+            border: medium solid #ffa500;
+        }
+
+        #a {
+            grid-area: a;
+        }
+
+        #b {
+            grid-area: b;
+        }
+
+        #c {
+            grid-area: c;
+        }
+
+        #d {
+            grid-area: d;
+        }
+
+        #e {
+            grid-area: e;
+        }
+
+        #f {
+            grid-area: f;
+        }
+
+        footer {
+            grid-area: footer;
+            background: rgb(200, 240, 180);
+            padding: 1em
+        }
+
+        address {
+            text-align: right
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <header><h1>1998年風の電気通信大学1年生のページ</h1></header>
+    <section id="a">
+        <p>微分積分学</p>
+        <p>hoge</p>
+    </section>
+    <section id="b">
+        <p>コンピューターリテラシー</p>
+        <p>hoge</p>
+    </section>
+    <section id="c">
+        <p>物理学基礎</p>
+        <p>hoge</p>
+    </section>
+    <section id="d">
+        <p>アカデミックリテラシー</p>
+        <p>hoge</p>
+    </section>
+    <section id="e">
+        <p>線形代数</p>
+        <p>hoge</p>
+    </section>
+    <section id="f">
+        <p>English</p>
+        <p>hoge</p>
+    </section>
+    <aside>
+        <p><a href="#">研究室紹介</a></p>
+        <p><a href="#">学内イベント紹介</a></p>
+        <p><a href="#">新入生紹介</a></p>
+    </aside>
+    <footer>
+        <address>懐古HP作成委員会</address>
+    </footer>
+</div>
+</body>
+</html>
