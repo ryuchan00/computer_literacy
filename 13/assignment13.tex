@@ -1,5 +1,6 @@
 \documentclass[12pt,a4j]{jarticle}
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
 \begin{document}
 \title{コンピュータリテラシレポート＃13}
 \author{1920031, 山川竜太郎}
@@ -29,6 +30,8 @@
 \end{center}
 
 \subsection{ソースコード}
+
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single]
 
 <!DOCTYPE html>
 <html>
@@ -141,16 +144,7 @@
 </body>
 </html>
 
-\subsection{解説}
-
-今回のグリッドデザインは下記のように4x4のマス目にした。2列目が最もサイズを大きくして目立つようデザインした。
-
-            grid-template-columns: 14em 2fr 1fr 1fr;
-            grid-template-rows: 6em 1fr 1fr 3em
-            
-template-areasの名前も、side,header,footerと比較的なじみのある名前に変更して、直感的に理解できるようにした。
-            
-            grid-template-areas: "side header header header" "side a b c" "side d e f" "side footer footer footer";
+\end{lstlisting}
 
 \section{考察}
 
