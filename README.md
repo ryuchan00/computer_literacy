@@ -5,6 +5,8 @@ Emacs チートシート
 https://gihyo.jp/assets/files/magazine/SD/2015/201510/download/Furoku_CheatSheet_Emacs.pdf
 LaTex チートシート
 https://wtsnjp.com/pdf/platexsheet.pdf
+Vim チートシート
+https://vim.rtorr.com/lang/ja
 
 setting
 
