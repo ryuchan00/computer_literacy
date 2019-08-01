@@ -11,8 +11,9 @@
         function start() {
             count = 20;
             // 演習4c
-            var red_num = document.getElementById('red_num');
             red = 60 + Math.floor(Math.random() * 196);
+            var red_num = document.getElementById('red_num');
+            red_num.innerHTML ='REDのRGB値:' + red;
             step();
         }
 
@@ -22,6 +23,7 @@
                 var hd0 = document.getElementById("hd0");
                 hd0.style.position = "relative";
                 hd0.style.top = num + "px";
+                // 演習4a
                 num = Math.random() * 40 - 20;
                 hd0.style.left = num + "px";
                 // 演習4b
