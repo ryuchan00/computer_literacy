@@ -5,9 +5,13 @@
     <meta charset="utf-8">
     <script type="text/javascript">
         var count;
+        var red;
+
 
         function start() {
             count = 20;
+            // 演習4c
+            var red_num = document.getElementById('red_num');
             red = 60 + Math.floor(Math.random() * 196);
             step();
         }
@@ -18,15 +22,19 @@
                 var hd0 = document.getElementById("hd0");
                 hd0.style.position = "relative";
                 hd0.style.top = num + "px";
+                num = Math.random() * 40 - 20;
+                hd0.style.left = num + "px";
                 // 演習4b
+                red_num.innerHTML ='REDのRGB値:' + red;
                 hd0.style.backgroundColor = 'rgb(' + red + ', 0,0)';
                 red -= 3;
-                setTimeout(step, 100);
+                setTimeout(step, 80);
             }
         }
     </script>
 </head>
 <body>
 <h1 id="hd0" onclick="start()">Click Me</h1>
+<div id="red_num"></div>
 </body>
 </html>
