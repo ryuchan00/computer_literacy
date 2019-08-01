@@ -13,7 +13,7 @@
             // 演習4c
             red = 60 + Math.floor(Math.random() * 196);
             var red_num = document.getElementById('red_num');
-            red_num.innerHTML ='REDのRGB値:' + red;
+            red_num.innerHTML = 'REDのRGB値:' + red;
             step();
         }
 
@@ -27,16 +27,19 @@
                 num = Math.random() * 40 - 20;
                 hd0.style.left = num + "px";
                 // 演習4b
-                red_num.innerHTML ='REDのRGB値:' + red;
+                red_num.innerHTML = 'REDのRGB値:' + red;
                 hd0.style.backgroundColor = 'rgb(' + red + ', 0,0)';
                 red -= 3;
+                // 演習4d
+                var height = Math.floor(Math.random() * 500);
+                hd0.style.height = height + 'px';
                 setTimeout(step, 80);
             }
         }
     </script>
 </head>
 <body>
-<h1 id="hd0" onclick="start()">Click Me</h1>
+<h1 id="hd0" style="height: 500px" onclick="start()">Click Me</h1>
 <div id="red_num"></div>
 </body>
 </html>
