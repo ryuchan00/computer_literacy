@@ -8,6 +8,7 @@
 
         function start() {
             count = 20;
+            red = 60 + Math.floor(Math.random() * 196);
             step();
         }
 
@@ -17,6 +18,9 @@
                 var hd0 = document.getElementById("hd0");
                 hd0.style.position = "relative";
                 hd0.style.top = num + "px";
+                // 演習4b
+                hd0.style.backgroundColor = 'rgb(' + red + ', 0,0)';
+                red -= 3;
                 setTimeout(step, 100);
             }
         }
