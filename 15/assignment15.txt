@@ -35,11 +35,70 @@ d. JavaScriptを使って任意の好きな変化をおこなうページを作�
 ```
 
 - 演習4c
-以下のコードをstart関数と
+以下のコードをstart関数とstep関数に演習4bで実装したRGBの赤の色の数値を表示するようにした。
 
 ```
             var red_num = document.getElementById('red_num');
             red_num.innerHTML = 'REDのRGB値:' + red;
+```
+
+- 演習4d
+
+step関数に、id=hd0のheightを500pxまでのランダムな値に変更するようにした。これはstep関数が実行されるたびにサイズが変わるようになっている。
+
+```
+                var height = Math.floor(Math.random() * 500);
+                hd0.style.height = height + 'px';
+```
+
+ソースコード全文
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        var count;
+        var red;
+
+
+        function start() {
+            count = 20;
+            // 演習4c
+            red = 60 + Math.floor(Math.random() * 196);
+            var red_num = document.getElementById('red_num');
+            red_num.innerHTML = 'REDのRGB値:' + red;
+            step();
+        }
+
+        function step() {
+            if (--count > 0) {
+                var num = Math.random() * 40 - 20;
+                var hd0 = document.getElementById("hd0");
+                hd0.style.position = "relative";
+                hd0.style.top = num + "px";
+                // 演習4a
+                num = Math.random() * 40 - 20;
+                hd0.style.left = num + "px";
+                // 演習4b
+                red_num.innerHTML = 'REDのRGB値:' + red;
+                hd0.style.backgroundColor = 'rgb(' + red + ', 0,0)';
+                red -= 3;
+                // 演習4d
+                var height = Math.floor(Math.random() * 500);
+                hd0.style.height = height + 'px';
+                setTimeout(step, 80);
+            }
+        }
+    </script>
+</head>
+<body>
+<h1 id="hd0" style="height: 500px" onclick="start()">Click Me</h1>
+<div id="red_num"></div>
+</body>
+</html>
 ```
 
 [考察]
@@ -49,6 +108,8 @@ d. JavaScriptを使って任意の好きな変化をおこなうページを作�
 `Math.random()`については、引数を与えない場合は0以上1未満の値をランダムで小数点で示す。それに示したい範囲内の数字に1足したものをかけて小数点を切り擦れれば、ある範囲内のうちの一つの整数を取得することができる。` Math.floor(Math.random() * 196)`は、0から195までの整数の値を一つ選ぶ処理である。`Math.random()`の最大値が1未満なため、おおよその最大値が0.999...になり、そこに指定したい範囲の最大値プラス1をかけることで最大でも指定したい範囲の最大値を取得することができる。
 
 RGBの調整だが、`red -= 3;`のように3づつ赤の値を引いたのは、1づつ減少させると、20回step関数を繰り返すので最大でも20しか色のグラデーションを表現することができず、私の目にはほとんど変化がないように見えた。観測結果が非常に認識しづらい。したがって、3づつ減少させることで、最大60の減少をして色の変化を分かりやすくした。結果としては、これのおかげで自身の成果を認識しやすくなった。このレポートで大切なのは、事象を認識してレポートを書くので、結果としてこの施策は成功したといえる。
+
+演習4cにて、RGBの赤の値を表示するように実装した。目的としては、数値として意味があること、画面に今の値が表示されるのでデバッグしやすくなることを期待してのことだった。結果としては、実装は成功だった。なぜなら、今のRGBの値が分かる上に、JavaScriptgが動いていれば、数値が変動するので、動作を確認しやすかった。
 
 今回の演習4dでは、id=hd0のheightの値を指定した。なぜなら演習4aからcまでの演習でやっておらず、なおかつ今までの演習の延長で実装できると判断したためだ。この実装は、`hd0.style.height = height + 'px';`のように今までの演習のスタイル部分を変更だけであり、あまり迷わずに実装することができた。このとき頭の中にあったのは、今までの延長で何ができるかということであり、今までのJavaScriptの演習は、スタイルを変更して、JavaScriptに慣れ親しむことであるため、リファレンスからちょうどよいものがないか探して、実装した。
 
