@@ -27,3 +27,7 @@ git push
 ```
 
 ここまでやったらPull requestを作成してください。Mergeは ryuchan00 が行います。
+
+課題のhp
+
+https://ryuchan00.github.io/computer_literacy/14/index.html
